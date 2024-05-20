@@ -2,7 +2,7 @@
 1) Trivy has access to NVD(national vulnerabuls database) which contains all vulnerability  from 2002 to 2024...
 2) trivy download that database and compare that database with our dependences..
 3) trivy is more better than OWASP dependency check because OWASP has only access to NVD,,but trivy can access to other databases like redhat linux,,other linux flavours 
-
+ ##     **** Here after generating reports it will provide severity like low, medium, HIGH,CRITICAL **********
 
 ---INSTALLATION STEPS---
 
@@ -30,6 +30,37 @@ trivy image -f json -o results.json image_name
 trivy repo repo-url
 
 trivy k8s --report summary cluster
+
+
+## Some more commands 
+
+Container Images
+```
+trivy image [image-name]
+```
+File systems
+```
+trivy fs /path/to/project
+```
+Git repository
+```
+trivy repo [github-repo-url]
+trivy repo --skip-update [github-repo-url]
+trivy repo --severity HIGH, CRITICAL [github-repo-url]
+trivy repo --skip-files "file1" --skip-files "file2" --skip-dirs "dir1" --skip-dirs "dir2" [github-repo-url]
+trivy repo --exit-code 1 --severity CRITICAL [github-repo-url
+```
+Tabular format on the terminal.
+trivy repo -f table [repo-url]
+
+JSON output
+trivy repo -f json -o results.json [repo-url]
+
+Custom template.
+trivy repo --format template --template "@html.tpl" -o report.html [repo-url]
+
+## Links
+https://sadilchamishka.medium.com/trivy-for-vulnerability-scanning-f9e967aea85f
 
 *******************************************************************************************************************************************************************
 

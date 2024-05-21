@@ -126,7 +126,12 @@ On *nix
 ```
 $ ./bin/dependency-check.sh -h
 $ ./bin/dependency-check.sh --out . --scan [path to jar files to be scanned]
+$ /ubuntu/home/dependency-check/bin/dependendency-check.sh --out . --scan .
+1)  /ubuntu/home/dependency-check/bin/dependendency-check.sh #### path for shell of dp-check
+2)   --scan .   ## . represent present directory 
 ```
+
+
 
 ### Maven Plugin
 

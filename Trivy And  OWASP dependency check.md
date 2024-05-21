@@ -1,8 +1,13 @@
-## Going to scan dependences which are using in our project (java====pom.xml,,,,,,nodejs====package.json,,,,,,,,,,python=====requirements.txt).
+## Going to scan dependences which are using in our project 
+```
+java=========pom.xml
+nodejs=======package.json
+python=======requirements.txt
+```
 1) Trivy has access to NVD(national vulnerabuls database) which contains all vulnerability  from 2002 to 2024...
 2) trivy download that database and compare that database with our dependences..
 3) trivy is more better than OWASP dependency check because OWASP has only access to NVD,,but trivy can access to other databases like redhat linux,,other linux flavours 
- ##     **** Here after generating reports it will provide severity like low, medium, HIGH,CRITICAL **********
+ ## **** Here after generating reports it will provide severity like low, medium, HIGH,CRITICAL *****
 
 ---INSTALLATION STEPS---
 
